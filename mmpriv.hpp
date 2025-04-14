@@ -6,6 +6,10 @@
 #include "bseq.h"
 #include "kseq.h"
 
+#include <unordered_set>
+#include <iostream>
+#include <fstream>
+
 #define MM_PARENT_UNSET   (-1)
 #define MM_PARENT_TMP_PRI (-2)
 
@@ -41,6 +45,8 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+extern std::unordered_set<uint64_t> solid_kmers;
 
 typedef struct {
 	uint32_t n;

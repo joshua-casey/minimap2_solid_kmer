@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <math.h>
-#include "mmpriv.h"
+#include "mmpriv.hpp"
 #include "kalloc.h"
 #include "khash.h"
 

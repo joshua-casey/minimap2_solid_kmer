@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "mmpriv.h"
+#include "mmpriv.hpp"
 #include "kalloc.h"
 
 #define MM_MIN_EXON_LEN 20

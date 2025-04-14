@@ -11,10 +11,15 @@
 #include "kthread.h"
 #include "bseq.h"
 #include "minimap.h"
-#include "mmpriv.h"
+#include "mmpriv.hpp"
 #include "ksw2.h"
 #include "kvec.h"
 #include "khash.h"
+
+
+#include <unordered_set>
+#include <iostream>
+#include <fstream>
 
 #define idx_hash(a) ((a)>>1)
 #define idx_eq(a, b) ((a)>>1 == (b)>>1)
@@ -419,7 +424,7 @@ mm_idx_t *mm_idx_build(const char *fn, int w, int k, int flag, int n_threads) //
 }
 
 mm_idx_t *mm_idx_str(int w, int k, int is_hpc, int bucket_bits, int n, const char **seq, const char **name)
-{
+{    
 	uint64_t sum_len = 0;
 	mm128_v a = {0,0,0};
 	mm_idx_t *mi;

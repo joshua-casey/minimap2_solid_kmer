@@ -6,9 +6,13 @@
 #include "kvec.h"
 #include "kalloc.h"
 #include "sdust.h"
-#include "mmpriv.h"
+#include "mmpriv.hpp"
 #include "bseq.h"
 #include "khash.h"
+
+#include <unordered_set>
+#include <iostream>
+#include <fstream>
 
 mm_tbuf_t *mm_tbuf_init(void)
 {
@@ -58,7 +62,7 @@ static int mm_dust_minier(void *km, int n, mm128_t *a, int l_seq, const char *se
 
 static void collect_minimizers(void *km, const mm_mapopt_t *opt, const mm_idx_t *mi, int n_segs, const int *qlens, const char **seqs, mm128_v *mv)
 {
-	int i, n, sum = 0;
+    int i, n, sum = 0;
 	mv->n = 0;
 	for (i = n = 0; i < n_segs; ++i) {
 		size_t j;

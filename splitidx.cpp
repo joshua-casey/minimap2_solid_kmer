@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <errno.h>
-#include "mmpriv.h"
+#include "mmpriv.hpp"
 
 FILE *mm_split_init(const char *prefix, const mm_idx_t *mi)
 {

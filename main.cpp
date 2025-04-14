@@ -4,7 +4,7 @@
 #include <errno.h>
 #include "bseq.h"
 #include "minimap.h"
-#include "mmpriv.h"
+#include "mmpriv.hpp"
 #include "ketopt.h"
 
 #ifdef __linux__

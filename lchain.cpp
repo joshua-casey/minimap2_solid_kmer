@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <assert.h>
-#include "mmpriv.h"
+#include "mmpriv.hpp"
 #include "kalloc.h"
 #include "krmq.h"
 

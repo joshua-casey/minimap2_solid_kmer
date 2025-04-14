@@ -4,7 +4,7 @@
 #include <assert.h>
 #include <stdio.h>
 #include "kalloc.h"
-#include "mmpriv.h"
+#include "mmpriv.hpp"
 
 static char mm_rg_id[256];
 

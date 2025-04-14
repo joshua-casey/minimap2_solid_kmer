@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <math.h>
-#include "mmpriv.h"
+#include "mmpriv.hpp"
 #include "kvec.h"
 
 void mm_select_sub_multi(void *km, float pri_ratio, float pri1, float pri2, int max_gap_ref, int min_diff, int best_n, int n_segs, const int *qlens, int *n_, mm_reg1_t *r)
